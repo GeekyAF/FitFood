@@ -3,6 +3,7 @@ import 'package:flutter_auth/Screens/Login/login_screen.dart';
 import 'package:flutter_auth/Screens/Signup/components/background.dart';
 import 'package:flutter_auth/Screens/Signup/components/or_divider.dart';
 import 'package:flutter_auth/Screens/Signup/components/social_icon.dart';
+import 'package:flutter_auth/Screens/User%20Profile/user_profile.dart';
 import 'package:flutter_auth/components/already_have_an_account_acheck.dart';
 import 'package:flutter_auth/components/rounded_button.dart';
 import 'package:flutter_auth/components/rounded_input_field.dart';
@@ -36,7 +37,14 @@ class Body extends StatelessWidget {
             ),
             RoundedButton(
               text: "SIGNUP",
-              press: () {},
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => userprofile()),
+
+                );
+
+              },
             ),
             SizedBox(height: size.height * 0.03),
             AlreadyHaveAnAccountCheck(
